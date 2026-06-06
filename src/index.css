@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  /* This forces Tailwind v4 to use the .dark class instead of system settings */
+  --variant-dark: .dark &;
+
+  --color-dark: #0b0b10;
+  --color-pink: #de9dbe;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Define theme variables for reliable switching */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #000000;
+  color-scheme: light;
+}
+
+html.dark {
+  --bg-primary: var(--color-dark);
+  --text-primary: #ffffff;
+  color-scheme: dark;
+  background-color: var(--color-dark);
+  color: #ffffff;
+}
+
+.dark {
+  --bg-primary: var(--color-dark);
+  --text-primary: #ffffff;
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: inherit;
+  color: inherit;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Smooth transition for background and text colors */
+  transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+/* Custom selection */
+::selection {
+  background-color: rgba(244, 136, 190, 0.3);
+  color: #f488be;
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease-in-out;
+}
+html.dark ::-webkit-scrollbar-thumb,
+body.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(244, 136, 190, 0.4);
+}
