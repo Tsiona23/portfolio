@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Reveal from "./Reveal"
 
 // Images
@@ -9,7 +9,6 @@ import exam from "../assets/images/exam.png"
 import notes from "../assets/images/notes.png"
 
 export default function Projects() {
-  const [repos, setRepos] = useState([])
   const [filter, setFilter] = useState("All")
 
   // 🔹 Featured projects (add category field)
@@ -60,16 +59,6 @@ export default function Projects() {
       demo: "#",
     },
   ]
-
-  // 🔹 GitHub API
-  useEffect(() => {
-    fetch("https://api.github.com/users/Tsiona23/repos")
-      .then((res) => res.json())
-      .then((data) => {
-        const filtered = data.filter((repo) => !repo.fork).slice(0, 4)
-        setRepos(filtered)
-      })
-  }, [])
 
   // 🔹 Filter logic
   const filteredProjects =
@@ -159,35 +148,6 @@ export default function Projects() {
         ))}
 
       </div>
-
-      {/*  GitHub Section */}
-      <Reveal>
-        <h3 className="text-2xl font-semibold mb-6">
-          More on GitHub
-        </h3>
-      </Reveal>
-
-      <div className="grid md:grid-cols-3 gap-6">
-
-        {repos.map((repo, i) => (
-          <Reveal key={repo.id} delay={i * 0.1}>
-            <div className="bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-5 rounded-2xl hover:border-[#f488be] transition">
-
-              <h3 className="font-semibold">{repo.name}</h3>
-
-              <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
-                {repo.description || "No description"}
-              </p>
-
-              
-            
-
-            </div>
-          </Reveal>
-        ))}
-
-      </div>
-
       </div>
     </section>
   )
