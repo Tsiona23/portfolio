@@ -42,7 +42,7 @@ export default function Projects() {
     },
     {
       title: "Examify",
-      desc: "Fullstack system with reactjs, nodejs, express, mongodb and socket.io",
+      desc: "Fullstack online examination system with reactjs, nodejs, express, mongodb and socket.io",
       tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
       category: "fullstack",
       img: exam,
