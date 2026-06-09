@@ -42,7 +42,7 @@ export default function Projects() {
       demo: "https://tsiona23.github.io/todo-app/",
     },
     {
-      title: "Online Exam System",
+      title: "Examify",
       desc: "Fullstack system with reactjs, nodejs, express, mongodb and socket.io",
       tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
       category: "fullstack",
@@ -179,13 +179,8 @@ export default function Projects() {
                 {repo.description || "No description"}
               </p>
 
-              <a
-                href={repo.html_url}
-                target="_blank"
-                className="inline-block mt-4 text-[#f488be] text-sm"
-              >
-                View Repo →
-              </a>
+              
+            
 
             </div>
           </Reveal>
