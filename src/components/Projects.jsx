@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Reveal from "./Reveal"
+import Reveal from "./Reveal" 
 
 // Images
 import delivery from "../assets/images/delivery.png"
