@@ -13,7 +13,7 @@ export default function Projects() {
 
   // 🔹 Featured projects (add category field)
   const featuredProjects = [
-    {
+    { 
       title: "Tsige Flow",
       desc: "Modern period tracking web app featuring cycle monitoring, symptom logging, and personalized health insights.",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
