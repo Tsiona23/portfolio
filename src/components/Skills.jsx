@@ -39,29 +39,29 @@ export default function Skills() {
     <section id="skills" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <h2 className="mb-12 text-4xl font-bold text-[#f488be]">Skills & Expertise</h2>
+          <h2 className="mb-12 text-4xl font-bold theme-accent">Skills & Expertise</h2>
         </Reveal>
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {skillGroups.map((group, i) => (
             <Reveal key={i} delay={i * 0.1}>
-              <div className="rounded-3xl border border-gray-200 bg-gray-50/50 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#f488be]/50 hover:shadow-2xl hover:shadow-[#f488be]/5 dark:border-white/10 dark:bg-white/5 sm:p-8">
+              <div className="theme-card rounded-3xl p-6 shadow-sm backdrop-blur-sm [-webkit-backdrop-filter:blur(4px)] transition-all duration-300 hover:-translate-y-2 hover:border-[--color-primary]/50 hover:shadow-[--color-primary-soft] sm:p-8">
                 <h3 className="mb-8 flex items-center gap-2 text-xl font-bold">
-                  <span className="h-6 w-1.5 rounded-full bg-[#f488be]"></span>
+                  <span className="h-6 w-1.5 rounded-full bg-[--color-primary]"></span>
                   {group.title}
                 </h3>
 
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-2 xl:grid-cols-2">
                   {group.skills.map((skill, idx) => (
                     <div key={idx} className="group/skill relative flex flex-col items-center">
-                      <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 group-hover/skill:scale-110 group-hover/skill:border-[#f488be]/30 group-hover/skill:bg-[#f488be]/5 dark:border-white/10 dark:bg-white/5">
+                      <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl border border-[--color-border] bg-[--color-surface-strong] shadow-sm transition-all duration-300 group-hover/skill:scale-110 group-hover/skill:border-[--color-primary]/30 group-hover/skill:bg-[--color-primary-soft]">
                         <SkillIcon name={skill.name} />
                       </div>
-                      <span className="text-center text-xs font-medium text-gray-600 transition-colors group-hover/skill:text-[#f488be] dark:text-gray-300">
+                      <span className="text-center text-xs font-medium theme-text-muted transition-colors group-hover/skill:theme-accent">
                         {skill.name}
                       </span>
-                      <div className="mt-1 h-1 w-0 rounded-full bg-[#f488be] transition-all duration-300 group-hover/skill:w-4"></div>
-                      <div className="pointer-events-none absolute -top-2 rounded-md bg-[#f488be] px-1.5 py-0.5 text-[10px] text-white opacity-0 transition-opacity group-hover/skill:opacity-100">
+                      <div className="mt-1 h-1 w-0 rounded-full bg-[--color-primary] transition-all duration-300 group-hover/skill:w-4"></div>
+                      <div className="pointer-events-none absolute -top-2 rounded-md bg-[--color-primary] px-1.5 py-0.5 text-[10px] text-white opacity-0 transition-opacity group-hover/skill:opacity-100">
                         {skill.level}%
                       </div>
                     </div>
@@ -92,7 +92,7 @@ function SkillIcon({ name }) {
   }
 
   return (
-    <div className="text-gray-600 transition-colors group-hover/skill:text-[#f488be] dark:text-gray-400">
+    <div className="theme-text-muted transition-colors group-hover/skill:theme-accent">
       {icons[name] || <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /></svg>}
     </div>
   )

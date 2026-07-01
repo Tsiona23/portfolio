@@ -5,11 +5,11 @@ export default function Contact() {
     <section id="contact" className="px-4 py-24 text-center sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal>
-          <h2 className="mb-6 text-4xl font-bold text-[#f488be]">Let’s Connect</h2>
+          <h2 className="mb-6 text-4xl font-bold theme-accent">Let’s Connect</h2>
         </Reveal>
 
         <Reveal>
-          <p className="mx-auto mb-12 max-w-lg text-base text-gray-500 dark:text-gray-400 sm:text-lg">
+          <p className="mx-auto mb-12 max-w-lg text-base theme-text-soft sm:text-lg">
             I’m open to freelance work, internships, and collaboration opportunities. Feel free to reach out through any platform below.
           </p>
         </Reveal>
@@ -18,7 +18,7 @@ export default function Contact() {
           <Reveal delay={0.1}>
             <a
               href="mailto:tsionawithaile@gmail.com"
-              className="flex h-16 w-full items-center justify-center rounded-full border border-gray-200 bg-gray-50/50 text-[#f488be] shadow-lg shadow-black/5 transition-all duration-300 hover:scale-110 hover:bg-[#f488be] hover:text-white dark:border-white/10 dark:bg-white/5 sm:h-18 sm:w-18"
+              className="flex h-16 w-full items-center justify-center rounded-full border border-[--color-border] bg-[--color-surface-muted] text-[--color-primary] shadow-[--color-shadow] transition-all duration-300 hover:scale-110 hover:bg-[--color-primary] hover:text-white sm:h-18 sm:w-18"
               aria-label="Email"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -33,7 +33,7 @@ export default function Contact() {
               href="https://github.com/Tsiona23"
               target="_blank"
               rel="noreferrer"
-              className="flex h-16 w-full items-center justify-center rounded-full border border-gray-200 bg-gray-50/50 text-[#f488be] shadow-lg shadow-black/5 transition-all duration-300 hover:scale-110 hover:bg-[#f488be] hover:text-white dark:border-white/10 dark:bg-white/5 sm:h-18 sm:w-18"
+              className="flex h-16 w-full items-center justify-center rounded-full border border-[--color-border] bg-[--color-surface-muted] text-[--color-primary] shadow-[--color-shadow] transition-all duration-300 hover:scale-110 hover:bg-[--color-primary] hover:text-white sm:h-18 sm:w-18"
               aria-label="GitHub"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
@@ -47,7 +47,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/tsion-haile/"
               target="_blank"
               rel="noreferrer"
-              className="flex h-16 w-full items-center justify-center rounded-full border border-gray-200 bg-gray-50/50 text-[#f488be] shadow-lg shadow-black/5 transition-all duration-300 hover:scale-110 hover:bg-[#f488be] hover:text-white dark:border-white/10 dark:bg-white/5 sm:h-18 sm:w-18"
+              className="flex h-16 w-full items-center justify-center rounded-full border border-[--color-border] bg-[--color-surface-muted] text-[--color-primary] shadow-[--color-shadow] transition-all duration-300 hover:scale-110 hover:bg-[--color-primary] hover:text-white sm:h-18 sm:w-18"
               aria-label="LinkedIn"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
@@ -61,7 +61,7 @@ export default function Contact() {
               href="https://t.me/Fairy_light23"
               target="_blank"
               rel="noreferrer"
-              className="flex h-16 w-full items-center justify-center rounded-full border border-gray-200 bg-gray-50/50 text-[#f488be] shadow-lg shadow-black/5 transition-all duration-300 hover:scale-110 hover:bg-[#f488be] hover:text-white dark:border-white/10 dark:bg-white/5 sm:h-18 sm:w-18"
+              className="flex h-16 w-full items-center justify-center rounded-full border border-[--color-border] bg-[--color-surface-muted] text-[--color-primary] shadow-[--color-shadow] transition-all duration-300 hover:scale-110 hover:bg-[--color-primary] hover:text-white sm:h-18 sm:w-18"
               aria-label="Telegram"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">

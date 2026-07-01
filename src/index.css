@@ -1,88 +1,196 @@
 @import "tailwindcss";
 
 @theme {
-  /* This forces Tailwind v4 to use the .dark class instead of system settings */
   --variant-dark: .dark &;
+  --color-dark: #06070d;
+  --color-pink: #f488be;
+}
 
-  --color-dark: #0b0b10;
-  --color-pink: #de9dbe;
+:root {
+  --color-bg: #f6f2f7;
+  --color-bg-alt: #f0e8ef;
+  --color-surface: rgba(255, 255, 255, 0.82);
+  --color-surface-strong: #ffffff;
+  --color-surface-muted: #f2eaf2;
+  --color-text: #111827;
+  --color-text-muted: #4b5563;
+  --color-text-soft: #6b7280;
+  --color-primary: #f488be;
+  --color-primary-strong: #e95f9e;
+  --color-primary-soft: rgba(244, 136, 190, 0.16);
+  --color-border: rgba(17, 24, 39, 0.14);
+  --color-divider: rgba(17, 24, 39, 0.08);
+  --color-shadow: rgba(15, 23, 42, 0.09);
+  --color-input: rgba(255, 255, 255, 0.92);
+  --color-focus: rgba(244, 136, 190, 0.3);
+  --color-scrollbar: rgba(17, 24, 39, 0.16);
+  --color-scrollbar-hover: rgba(244, 136, 190, 0.42);
+  color-scheme: light;
+}
+
+[data-theme="dark"],
+.dark {
+  --color-bg: #06070d;
+  --color-bg-alt: #101521;
+  --color-surface: rgba(15, 23, 42, 0.8);
+  --color-surface-strong: #111827;
+  --color-surface-muted: rgba(255, 255, 255, 0.05);
+  --color-text: #f8fafc;
+  --color-text-muted: #d1d5db;
+  --color-text-soft: #9ca3af;
+  --color-primary: #f68dbd;
+  --color-primary-strong: #ff9bc8;
+  --color-primary-soft: rgba(246, 141, 189, 0.18);
+  --color-border: rgba(255, 255, 255, 0.14);
+  --color-divider: rgba(255, 255, 255, 0.08);
+  --color-shadow: rgba(2, 6, 23, 0.45);
+  --color-input: rgba(15, 23, 42, 0.75);
+  --color-focus: rgba(246, 141, 189, 0.32);
+  --color-scrollbar: rgba(255, 255, 255, 0.14);
+  --color-scrollbar-hover: rgba(246, 141, 189, 0.46);
+  color-scheme: dark;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* Define theme variables for reliable switching */
-:root {
-  --bg-primary: #ffffff;
-  --text-primary: #000000;
-  color-scheme: light;
-}
-
-html.dark {
-  --bg-primary: var(--color-dark);
-  --text-primary: #ffffff;
-  color-scheme: dark;
-  background-color: var(--color-dark);
-  color: #ffffff;
-}
-
-.dark {
-  --bg-primary: var(--color-dark);
-  --text-primary: #ffffff;
-  color-scheme: dark;
-}
-
 html,
-body {
-  height: 100%;
+body,
+#root {
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
 }
 
 body {
-  background-color: inherit;
-  color: inherit;
-}
-
-body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Smooth transition for background and text colors */
-  transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background-color 400ms ease, color 400ms ease, border-color 400ms ease, box-shadow 400ms ease;
 }
 
-/* Custom selection */
+a,
+button,
+input,
+textarea,
+select {
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+}
+
+.theme-shell {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.theme-panel {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 20px 55px var(--color-shadow);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.theme-card {
+  background-color: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+}
+
+.theme-button-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 18px 40px var(--color-primary-soft);
+}
+
+.theme-button-primary:hover {
+  background-color: var(--color-primary-strong);
+  transform: translateY(-1px);
+}
+
+.theme-button-secondary {
+  background-color: var(--color-surface-strong);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.theme-button-secondary:hover {
+  background-color: var(--color-surface-muted);
+  border-color: var(--color-primary);
+}
+
+.theme-text-muted {
+  color: var(--color-text-muted);
+}
+
+.theme-text-soft {
+  color: var(--color-text-soft);
+}
+
+.theme-accent {
+  color: var(--color-primary);
+}
+
+.theme-chip {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.theme-toggle {
+  background-color: var(--color-surface-strong);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  box-shadow: 0 12px 35px var(--color-shadow);
+}
+
+.theme-toggle-knob {
+  background-color: var(--color-surface-strong);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+}
+
+.theme-input {
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.theme-input::placeholder {
+  color: var(--color-text-soft);
+}
+
+.theme-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--color-focus);
+  outline: none;
+}
+
 ::selection {
   background-color: rgba(244, 136, 190, 0.3);
-  color: #f488be;
+  color: var(--color-primary);
 }
 
-/* Modern Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: #e5e7eb;
+  background-color: var(--color-scrollbar);
   border-radius: 9999px;
-  transition: background-color 0.2s ease-in-out;
 }
-html.dark ::-webkit-scrollbar-thumb,
-body.dark ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(244, 136, 190, 0.4);
+  background-color: var(--color-scrollbar-hover);
 }

@@ -80,7 +80,7 @@ export default function Projects() {
     <section id="projects" className="py-24 transition-colors duration-300">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="mb-8 text-4xl font-bold text-[#f488be]">Projects</h2>
+          <h2 className="mb-8 text-4xl font-bold theme-accent">Projects</h2>
         </Reveal>
 
         <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -90,8 +90,8 @@ export default function Projects() {
               onClick={() => setFilter(f)}
               className={`w-full rounded-full border px-4 py-3 text-sm font-medium transition sm:w-auto ${
                 filter === f
-                  ? "border-[#f488be] bg-[#f488be] text-white"
-                  : "border-gray-200 text-gray-600 hover:border-[#f488be] dark:border-white/20 dark:text-gray-300"
+                  ? "border-[--color-primary] bg-[--color-primary] text-white"
+                  : "border-[--color-border] theme-text-muted hover:border-[--color-primary]"
               }`}
             >
               {f}
@@ -102,7 +102,7 @@ export default function Projects() {
         <div className="mb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((p, i) => (
             <Reveal key={i} delay={i * 0.1}>
-              <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 transition duration-300 hover:-translate-y-2 hover:border-[#f488be] dark:border-white/10 dark:bg-white/5 dark:hover:border-[#f488be]">
+              <div className="group overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-surface-muted] transition duration-300 hover:-translate-y-2 hover:border-[--color-primary]">
                 <img
                   src={p.img}
                   alt={p.title}
@@ -112,21 +112,21 @@ export default function Projects() {
                 <div className="p-5">
                   <h3 className="font-semibold">{p.title}</h3>
 
-                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{p.desc}</p>
+                  <p className="mt-2 text-sm theme-text-muted">{p.desc}</p>
 
                   <div className="mt-3 flex flex-wrap gap-2">
                     {p.tech.map((t, idx) => (
-                      <span key={idx} className="rounded bg-gray-200 px-2 py-1 text-xs dark:bg-white/10">
+                      <span key={idx} className="theme-chip rounded px-2 py-1 text-xs">
                         {t}
                       </span>
                     ))}
                   </div>
 
                   <div className="mt-4 flex gap-4 text-sm">
-                    <a href={p.github} className="text-gray-600 transition hover:text-[#f488be] dark:text-gray-300">
+                    <a href={p.github} className="theme-text-muted transition hover:theme-accent">
                       GitHub
                     </a>
-                    <a href={p.demo} className="text-[#f488be]">
+                    <a href={p.demo} className="theme-accent">
                       Demo →
                     </a>
                   </div>
