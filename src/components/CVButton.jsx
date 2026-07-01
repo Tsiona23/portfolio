@@ -3,7 +3,7 @@ export default function CVButton() {
     <a
       href="/assets/cv.pdf"
       download
-      className="px-6 py-3 bg-[#f488be] rounded-xl hover:scale-105 transition inline-block"
+      className="inline-block w-full rounded-2xl bg-[#f488be] px-6 py-3 text-center font-medium text-white transition hover:scale-[1.02] sm:w-auto"
     >
       Download CV
     </a>

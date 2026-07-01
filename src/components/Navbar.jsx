@@ -25,18 +25,19 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-100 bg-white text-black dark:bg-slate-950 dark:text-white backdrop-blur-xl border-b border-black/5 dark:border-white/5">
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/90 text-black backdrop-blur-xl dark:border-white/5 dark:bg-slate-950/90 dark:text-white">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <h1 className="text-lg font-bold tracking-tighter text-[#f488be] sm:text-xl">Tsion</h1>
 
-        <h1 className="text-xl text-[#f488be] font-bold tracking-tighter">Tsion</h1>
-
-        <div className="hidden md:flex gap-6 text-sm">
+        <div className="hidden gap-6 text-sm md:flex">
           {links.map((l) => (
             <a
               key={l}
               href={`#${l}`}
               className={`capitalize transition ${
-                active === l ? "text-[#f488be]" : "text-gray-600 dark:text-gray-300 hover:text-[#f488be] dark:hover:text-[#f488be]"
+                active === l
+                  ? "text-[#f488be]"
+                  : "text-gray-600 hover:text-[#f488be] dark:text-gray-300 dark:hover:text-[#f488be]"
               }`}
             >
               {l}
@@ -44,33 +45,33 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile menu toggle */}
-        <button 
+        <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-black dark:text-white"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-black transition hover:border-[#f488be] hover:text-[#f488be] dark:border-white/10 dark:text-white md:hidden"
           aria-label="Toggle menu"
         >
-          <span className="text-2xl">{isOpen ? "✕" : "☰"}</span>
+          <span className="text-xl">{isOpen ? "✕" : "☰"}</span>
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-white dark:bg-slate-950 border-b border-black/5 dark:border-white/5"
+            exit={{ opacity: 0, y: -12 }}
+            className="border-b border-black/5 bg-white/95 dark:border-white/5 dark:bg-slate-950/95 md:hidden"
           >
-            <div className="flex flex-col p-6 gap-4">
+            <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 sm:px-6">
               {links.map((l) => (
                 <a
                   key={l}
                   href={`#${l}`}
                   onClick={() => setIsOpen(false)}
-                  className={`capitalize text-lg font-medium transition ${
-                    active === l ? "text-[#f488be]" : "text-gray-600 dark:text-gray-300"
+                  className={`rounded-2xl px-4 py-3 text-lg font-medium capitalize transition ${
+                    active === l
+                      ? "bg-[#f488be]/10 text-[#f488be]"
+                      : "text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-white/10"
                   }`}
                 >
                   {l}

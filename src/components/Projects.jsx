@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Reveal from "./Reveal" 
+import Reveal from "./Reveal"
 
 // Images
 import delivery from "../assets/images/delivery.png"
@@ -7,13 +7,31 @@ import todo from "../assets/images/todo.png"
 import pTracker from "../assets/images/p-tracker.png"
 import exam from "../assets/images/exam.png"
 import notes from "../assets/images/notes.png"
+import interviewhub from "../assets/images/interviewhub.png"
 
 export default function Projects() {
   const [filter, setFilter] = useState("All")
 
-  // 🔹 Featured projects (add category field)
   const featuredProjects = [
-    { 
+    {
+      title: "interview Hub",
+      desc: "a modern and responsive interview preparation platform",
+      tech: ["html", "css", "javascript"],
+      category: "Frontend",
+      img: interviewhub,
+      github: "https://github.com/Tsiona23/Interview-Hub-.git",
+      demo: "https://interview-hub-sand.vercel.app/",
+    },
+    {
+      title: "Examify",
+      desc: "Fullstack online examination system with reactjs, nodejs, express, mongodb and socket.io",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+      category: "fullstack",
+      img: exam,
+      github: "https://github.com/Tsiona23/EXMIFY.git",
+      demo: "https://exmify.vercel.app/",
+    },
+    {
       title: "Tsige Flow",
       desc: "Modern period tracking web app featuring cycle monitoring, symptom logging, and personalized health insights.",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
@@ -41,15 +59,6 @@ export default function Projects() {
       demo: "https://tsiona23.github.io/todo-app/",
     },
     {
-      title: "Examify",
-      desc: "Fullstack online examination system with reactjs, nodejs, express, mongodb and socket.io",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-      category: "fullstack",
-      img: exam,
-      github: "https://github.com/Tsiona23/EXMIFY.git",
-      demo: "https://exmify.vercel.app/",
-    },
-    {
       title: "Notes App",
       desc: "Android app with Firebase sync",
       tech: ["Kotlin", "Firebase"],
@@ -60,7 +69,6 @@ export default function Projects() {
     },
   ]
 
-  // 🔹 Filter logic
   const filteredProjects =
     filter === "All"
       ? featuredProjects
@@ -70,84 +78,63 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-24 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <Reveal>
+          <h2 className="mb-8 text-4xl font-bold text-[#f488be]">Projects</h2>
+        </Reveal>
 
-      {/* Title */}
-      <Reveal>
-        <h2 className="text-4xl font-bold text-[#f488be] mb-8">
-          Projects
-        </h2>
-      </Reveal>
-
-      {/*  Filter Buttons */}
-      <div className="flex flex-wrap gap-3 mb-10">
-        {filters.map((f) => (
-          <button
-            key={f}
-            onClick={() => setFilter(f)}
-            className={`
-              px-4 py-2 rounded-full text-sm border transition
-              ${filter === f
-                ? "bg-[#f488be] text-white border-[#f488be]"
-                : "border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 hover:border-[#f488be]"
-              }
-            `}
-          >
-            {f}
-          </button>
-        ))}
-      </div>
-
-      {/*  Filtered Projects */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-
-        {filteredProjects.map((p, i) => (
-          <Reveal key={i} delay={i * 0.1}>
-            <div
-              className="
-              group bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden
-              hover:-translate-y-2 hover:border-[#f488be] dark:hover:border-[#f488be]
-              transition duration-300
-            "
+        <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          {filters.map((f) => (
+            <button
+              key={f}
+              onClick={() => setFilter(f)}
+              className={`w-full rounded-full border px-4 py-3 text-sm font-medium transition sm:w-auto ${
+                filter === f
+                  ? "border-[#f488be] bg-[#f488be] text-white"
+                  : "border-gray-200 text-gray-600 hover:border-[#f488be] dark:border-white/20 dark:text-gray-300"
+              }`}
             >
-              <img
-                src={p.img}
-                alt={p.title}
-                className="h-44 w-full object-cover group-hover:scale-105 transition"
-              />
+              {f}
+            </button>
+          ))}
+        </div>
 
-              <div className="p-5">
-                <h3 className="font-semibold">{p.title}</h3>
+        <div className="mb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredProjects.map((p, i) => (
+            <Reveal key={i} delay={i * 0.1}>
+              <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 transition duration-300 hover:-translate-y-2 hover:border-[#f488be] dark:border-white/10 dark:bg-white/5 dark:hover:border-[#f488be]">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="h-44 w-full object-cover transition duration-300 group-hover:scale-105"
+                />
 
-                <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
-                  {p.desc}
-                </p>
+                <div className="p-5">
+                  <h3 className="font-semibold">{p.title}</h3>
 
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {p.tech.map((t, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs bg-gray-200 dark:bg-white/10 px-2 py-1 rounded"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{p.desc}</p>
 
-                <div className="flex gap-4 mt-4 text-sm">
-                  <a href={p.github} className="text-gray-600 dark:text-gray-300 hover:text-[#f488be]">
-                    GitHub
-                  </a>
-                  <a href={p.demo} className="text-[#f488be]">
-                    Demo →
-                  </a>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {p.tech.map((t, idx) => (
+                      <span key={idx} className="rounded bg-gray-200 px-2 py-1 text-xs dark:bg-white/10">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 flex gap-4 text-sm">
+                    <a href={p.github} className="text-gray-600 transition hover:text-[#f488be] dark:text-gray-300">
+                      GitHub
+                    </a>
+                    <a href={p.demo} className="text-[#f488be]">
+                      Demo →
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
-
-      </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   )
