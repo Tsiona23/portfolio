@@ -1,39 +1,73 @@
-%PDF-1.4
-1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
-endobj
-2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
-endobj
-3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
-endobj
-4 0 obj
-<< /Length 141 >>
-stream
-BT
-/F1 20 Tf
-72 720 Td
-(Resume / CV) Tj
-0 -28 Td
-/F1 12 Tf
-(Download available from the portfolio site.) Tj
-ET
-endstream
-endobj
-5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
-endobj
-xref
-0 6
-0000000000 65535 f 
-0000000010 00000 n 
-0000000062 00000 n 
-0000000119 00000 n 
-0000000208 00000 n 
-0000000308 00000 n 
-trailer
-<< /Size 6 /Root 1 0 R >>
-startxref
-0
-%%EOF
+TSION HAILEKIROS
+
+tsionawithaile@gmail.com | +251 951 143 617 |
+GitHub: https://github.com/Tsiona23 LinkedIn: https://www.linkedin.com/in/tsion-haile | Portfolio: https://portfolio-ten-alpha-1p33m5prk6.vercel.app/
+
+EDUCATION
+Mekelle University, Ethiopia
+Bachelor of Science in Information Technology
+Expected Graduation: 2027
+
+PROFESSIONAL SUMMARY
+Motivated and enthusiastic Information Technology student at Mekelle University, expected to graduate in 2027.
+Passionate about Software Engineering, Web Development, Mobile Application Development, and Open Source
+Technologies. Currently seeking a Software Engineering Internship to gain real-world industry experience, collaborate with
+professional development teams, contribute to impactful software projects, and deepen understanding of software
+development processes, system design, and industry best practices.
+
+TECHNICAL SKILLS
+Languages: Java, JavaScript, PHP, Python (Basic), C++
+Frontend: React.js, HTML5, CSS3, Tailwind CSS, Vite
+Backend: Node.js, Express.js, PHP, REST APIs
+Mobile App Development: Kotlin (Android Development)
+Databases: MySQL, MongoDB
+Tools: Git, GitHub, VS Code, IntelliJ IDEA, Postman, Figma
+Concepts: OOP, Data Structures & Algorithms, Database Design, Responsive Web Design
+
+SOFT SKILLS
+Problem Solving, Team Collaboration, Communication, Adaptability, Time Management, Continuous Learning, Attention
+to Detail
+
+PROJECTS
+Online Examination System
+Tech Stack: React.js, Tailwind CSS, Node.js, Express, MongoDB, socket.io
+• Developed a web-based examination management system as part of academic coursework.
+• Implemented features for student registration, question management, and result tracking.
+• Designed database structures to securely store student and examination data.
+• Applied software engineering principles throughout the development process.
+
+Frontend Web Development Projects
+• Developed responsive websites and landing pages using modern frontend technologies.
+• Focused on clean user interfaces, responsiveness, and user experience.
+• Built reusable React components and optimized layouts for multiple screen sizes.
+Published and maintained personal projects through GitHub and Vercel.
+
+Personal Portfolio Website
+https://portfolio-ten-alpha-1p33m5prk6.vercel.app/
+Tech Stack: React.js, Vite, Tailwind CSS
+• Designed and developed a personal portfolio website showcasing projects, skills, and technical experience.
+• Implemented responsive layouts and modern UI design principles.
+• Deployed the website using a modern hosting platform.
+
+CERTIFICATIONS
+ALX Professional Foundations
+https://savanna.alxafrica.com/dashboards/my_curriculums#my-certificates
+ALX Africa
+● Completed professional training focused on communication, teamwork, problem-solving, leadership, and workplace
+readiness.
+
+Fundamentals of Programming
+https://www.udacity.com/certificate/e/0d8bfef0-4faf-11ef-b6cd-ffbfcda64cd9
+Udacity
+● Learned programming fundamentals including problem-solving, algorithms, variables, functions, data structures, and
+object-oriented concepts.
+
+Android Development with Kotlin
+https://www.udacity.com/certificate/lp/ede68f8c-5b2f-46d3-aee6-5091edd9a188
+Udacity
+● Developed foundational Android development skills using Kotlin.
+● Built mobile applications while learning Android components, activities, layouts, and application lifecycle concepts.
+
+OPEN SOURCE & COMMUNITY INTERESTS
+Interested in contributing to open-source projects, collaborating through GitHub, and continuously learning modern
+software engineering practices.
