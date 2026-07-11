@@ -12,7 +12,9 @@ export default function About() {
           <Reveal>
             <div className="theme-card rounded-3xl p-6 shadow-sm backdrop-blur-sm [-webkit-backdrop-filter:blur(4px)] transition-all hover:border-[--color-primary]/30 sm:p-8">
               <p className="leading-relaxed theme-text-muted">
-                I am a creative developer dedicated to crafting elegant solutions through code. My approach blends technical precision with a user-centric mindset, allowing me to turn abstract concepts into high-performing digital realities. Beyond just writing code, I am committed to continuous learning and staying at the forefront of emerging technologies to build impactful applications that bridge the gap between design and functionality.
+              I'm a software developer passionate about building modern, intuitive, and impactful digital experiences. 
+              I enjoy transforming ideas into scalable applications through clean code, thoughtful design, and continuous learning.
+
               </p>
             </div>
           </Reveal>
@@ -33,7 +35,7 @@ export default function About() {
                 </span>
               </div>
               <p className="mt-4 leading-relaxed theme-text-muted">
-                Immersing myself in the core principles of information technology has provided me with a robust theoretical framework. My academic path is defined by a rigorous exploration of software engineering, data structures, and enterprise computing. This background serves as the foundation for my practical exploration into modern development workflows, ensuring that every project I build is backed by sound logic and scalable architecture.
+               Pursuing a Bachelor's degree in Information Technology with a strong foundation in software engineering, programming, database systems, networking, computer science fundamentals and modern technologies through academic study and hands-on projects.
               </p>
             </div>
           </Reveal>
