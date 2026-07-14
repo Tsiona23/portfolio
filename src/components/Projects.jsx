@@ -1,4 +1,4 @@
-import { useState } from "react"
+﻿import { useState } from "react"
 import Reveal from "./Reveal"
 
 // Images
@@ -47,7 +47,7 @@ export default function Projects() {
       category: "Frontend",
       img: delivery,
       github: "https://github.com/Tsiona23/simple-delivery-website.git",
-      demo: "https://tsiona23.github.io/simple-delivery-website/",
+      demo: "https://zi-express.vercel.app/",
     },
     {
       title: "Todo List App",
