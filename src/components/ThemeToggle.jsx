@@ -4,10 +4,18 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
     if (typeof window === "undefined") return "dark"
 
-    const storedTheme = window.localStorage.getItem("theme")?.trim().toLowerCase()
-    if (storedTheme === "light" || storedTheme === "dark") return storedTheme
+    const storedTheme = window.localStorage
+      .getItem("theme")
+      ?.trim()
+      .toLowerCase()
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+    if (storedTheme === "light" || storedTheme === "dark") {
+      return storedTheme
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light"
   })
 
   useEffect(() => {
@@ -17,6 +25,7 @@ export default function ThemeToggle() {
     root.classList.toggle("dark", isDark)
     root.setAttribute("data-theme", isDark ? "dark" : "light")
     root.style.colorScheme = isDark ? "dark" : "light"
+
     window.localStorage.setItem("theme", theme)
   }, [theme])
 
@@ -24,12 +33,20 @@ export default function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
-      aria-label="Toggle theme"
+      type="button"
+      onClick={() =>
+        setTheme((prev) =>
+          prev === "dark" ? "light" : "dark"
+        )
+      }
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-pressed={isDark}
       className="theme-toggle fixed right-6 top-12 z-110 flex h-8 w-16 items-center rounded-full px-1"
     >
       <div
-        className={`theme-toggle-knob flex h-6 w-6 items-center justify-center rounded-full text-[10px] transition-transform duration-300 ${isDark ? "translate-x-8" : "translate-x-0"}`}
+        className={`theme-toggle-knob flex h-6 w-6 items-center justify-center rounded-full text-[10px] transition-transform duration-300 ${
+          isDark ? "translate-x-8" : "translate-x-0"
+        }`}
       >
         <span>{isDark ? "🌙" : "☀️"}</span>
       </div>
