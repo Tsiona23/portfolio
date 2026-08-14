@@ -7,50 +7,67 @@
 }
 
 :root {
-  --color-bg: #f6f2f7;
-  --color-bg-alt: #f0e8ef;
-  --color-surface: rgba(255, 255, 255, 0.82);
+  --color-bg: #ffffff;
+  --color-bg-alt: #fff7fa;
+
+  --color-surface: rgba(255, 255, 255, 0.88);
   --color-surface-strong: #ffffff;
-  --color-surface-muted: #f2eaf2;
-  --color-text: #111827;
-  --color-text-muted: #4b5563;
-  --color-text-soft: #6b7280;
+  --color-surface-muted: #fff3f7;
+
+  --color-text: #111111;
+  --color-text-muted: #555555;
+  --color-text-soft: #777777;
+
   --color-primary: #f488be;
   --color-primary-strong: #e95f9e;
   --color-primary-soft: rgba(244, 136, 190, 0.16);
-  --color-border: rgba(17, 24, 39, 0.14);
-  --color-divider: rgba(17, 24, 39, 0.08);
-  --color-shadow: rgba(15, 23, 42, 0.09);
-  --color-input: rgba(255, 255, 255, 0.92);
+
+  --color-border: rgba(17, 17, 17, 0.12);
+  --color-divider: rgba(17, 17, 17, 0.07);
+
+  --color-shadow: rgba(15, 23, 42, 0.08);
+
+  --color-input: rgba(255, 255, 255, 0.95);
+
   --color-focus: rgba(244, 136, 190, 0.3);
-  --color-scrollbar: rgba(17, 24, 39, 0.16);
+
+  --color-scrollbar: rgba(17, 17, 17, 0.16);
   --color-scrollbar-hover: rgba(244, 136, 190, 0.42);
+
   color-scheme: light;
 }
 
 [data-theme="dark"],
 .dark {
-  --color-bg: #06070d;
-  --color-bg-alt: #101521;
-  --color-surface: rgba(15, 23, 42, 0.8);
-  --color-surface-strong: #111827;
+  --color-bg: #0d0d0d;
+  --color-bg-alt: #151515;
+
+  --color-surface: rgba(23, 23, 23, 0.88);
+  --color-surface-strong: #171717;
   --color-surface-muted: rgba(255, 255, 255, 0.05);
-  --color-text: #f8fafc;
-  --color-text-muted: #d1d5db;
-  --color-text-soft: #9ca3af;
+
+  --color-text: #ffffff;
+  --color-text-muted: #d1d1d1;
+  --color-text-soft: #999999;
+
   --color-primary: #f68dbd;
   --color-primary-strong: #ff9bc8;
   --color-primary-soft: rgba(246, 141, 189, 0.18);
-  --color-border: rgba(255, 255, 255, 0.14);
-  --color-divider: rgba(255, 255, 255, 0.08);
-  --color-shadow: rgba(2, 6, 23, 0.45);
-  --color-input: rgba(15, 23, 42, 0.75);
+
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-divider: rgba(255, 255, 255, 0.07);
+
+  --color-shadow: rgba(0, 0, 0, 0.45);
+
+  --color-input: rgba(23, 23, 23, 0.9);
+
   --color-focus: rgba(246, 141, 189, 0.32);
+
   --color-scrollbar: rgba(255, 255, 255, 0.14);
   --color-scrollbar-hover: rgba(246, 141, 189, 0.46);
+
   color-scheme: dark;
 }
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
