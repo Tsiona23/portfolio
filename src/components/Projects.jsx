@@ -4,10 +4,11 @@ import Reveal from "./Reveal"
 // Images
 import delivery from "../assets/images/delivery.png"
 import todo from "../assets/images/todo.png"
-import pTracker from "../assets/images/p-tracker.png"
+import "../assets/images/p-tracker.png"
 import exam from "../assets/images/exam.png"
 import notes from "../assets/images/notes.png"
 import interviewhub from "../assets/images/interviewhub.png"
+import ReviewLens from "../assets/images/ReviewLens.png"
 
 export default function Projects() {
   const [filter, setFilter] = useState("All")
@@ -36,7 +37,7 @@ export default function Projects() {
       desc: "ReviewLens is a full-stack web application that uses AI to analyze app reviews and turn user feedback into useful insights.",
       tech: ["React", "Tailwind CSS", "Framer Motion","node.js", "Express","Google gemini API"],
       category: "Full stack",
-      img: pTracker,
+      img: ReviewLens,
       github: "https://github.com/Tsiona23/ReviewLens.git",
       demo: "https://review-lens-wine.vercel.app/",
     },
