@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react"
+﻿﻿import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import {
   ArrowLeft,
@@ -573,8 +573,8 @@ export default function Projects() {
                   duration-300
                   ${
                     isActive
-                      ? "border-[--color-primary] bg-[--color-primary] text-white shadow-lg"
-                      : "border-[--color-border] theme-text-muted hover:border-[--color-primary] hover:theme-accent"
+                      ? "border-[--color-primary] bg-[--color-primary] text-[--color-text] shadow-lg"
+                      : "border-[--color-border] theme-text-muted hover:border-[--color-primary] hover:text-[--color-text]"
                   }
                 `}
               >
@@ -748,9 +748,8 @@ export default function Projects() {
                           py-1
                           text-[8px]
                           font-bold
-                          uppercase
-                          tracking-wider
-                          text-white
+                          uppercase tracking-wider
+                          text-[--color-text]
                         "
                       >
                         <Sparkles size={10} />
@@ -940,7 +939,7 @@ export default function Projects() {
                             py-2
                             text-[9px]
                             font-semibold
-                            text-white
+                            text-[--color-text]
                             transition
                             hover:bg-[--color-primary-strong]
                           "
@@ -1241,7 +1240,7 @@ export default function Projects() {
               py-2.5
               text-xs
               font-semibold
-              text-white
+              text-[--color-text]
               transition
               hover:bg-[--color-primary-strong]
             "
