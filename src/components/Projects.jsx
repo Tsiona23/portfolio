@@ -546,7 +546,7 @@ export default function Projects() {
             gap-2
             overflow-x-auto
             pb-2
-            scrollbar-hide
+            scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[--color-primary]/50 hover:scrollbar-thumb-[--color-primary]
           "
         >
           {filters.map((item) => {
