@@ -506,7 +506,7 @@ export default function About() {
                     justify-center
                     rounded-2xl
                     bg-[--color-primary]
-                    text-white
+                    text-[--color-text]
                   "
                 >
                   <Laptop size={19} />
@@ -572,7 +572,7 @@ export default function About() {
                 rounded-4xl
                 bg-[--color-primary]
                 p-6
-                text-white
+                text-[--color-text]
               "
             >
               {/* DECORATIVE CODE SYMBOL */}
@@ -585,7 +585,7 @@ export default function About() {
                   text-[100px]
                   font-black
                   leading-none
-                  text-white/50
+                  text-opacity-50
                 "
               >
                 {"</>"}
@@ -615,7 +615,7 @@ export default function About() {
                   relative
                   mt-3
                   text-[10px]
-                  text-white/70
+                  text-opacity-70
                 "
               >
                 My approach to development
