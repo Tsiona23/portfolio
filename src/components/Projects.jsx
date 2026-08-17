@@ -97,7 +97,7 @@ const projects = [
     category: "Frontend",
     img: todo,
     github: "https://github.com/Tsiona23/todo-app.git",
-    demo: "https://tsiona23.github.io/todo-app/",
+    demo: "https://todo-app-dun-tau.vercel.app/",
     number: "05",
   },
 
